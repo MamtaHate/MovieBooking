@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.01:3306/moviesystem</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        
+        <mapping class="com.project.movies.pojos.User"/>
+        <mapping class="com.project.movies.pojos.Admin"/>
+        <mapping class="com.project.movies.pojos.Auditorium"/>
+        <mapping class="com.project.movies.pojos.Theater"/>
+        
+        <!-- <mapping class="com.project.movies.pojos.SeatBooking"/> 
+        
+        <mapping class="com.project.movies.pojos.Showtime"/>
+        
+        <mapping class="com.project.movies.pojos.Genre"/>
+        <mapping class="com.project.movies.pojos.Movie"/>
+        <mapping class="com.project.movies.pojos.MoviePrice"/>
+        <mapping class="com.project.movies.pojos.MovieRating"/>
+        <mapping class="com.project.movies.pojos.Seat"/>-->
+        
+                
+    </session-factory>
+</hibernate-configuration>
